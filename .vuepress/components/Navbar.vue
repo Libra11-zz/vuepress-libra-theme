@@ -102,23 +102,23 @@
     <nav class="mobile-nav show-on-mobiles">
       <ul>
         <li class="current">
-          <a href="/">Home</a>
+          <a href="/">主页</a>
         </li>
 
         <li>
-          <a href="/docs/">Docs</a>
+          <a href="/docs/">分类</a>
         </li>
 
         <li>
-          <a href="/resources/">Resources</a>
+          <a href="/resources/">标签</a>
         </li>
 
         <li>
-          <a href="/news/">News</a>
+          <a href="/news/">时间线</a>
         </li>
 
         <li>
-          <a href="https://github.com/jekyll/jekyll">GitHub</a>
+          <a href="https://github.com/jekyll/jekyll">联系我</a>
         </li>
       </ul>
     </nav>
@@ -163,6 +163,7 @@ header {
   font-size: 21px;
   padding: 15px;
   background: #2b2b2b;
+  box-sizing: border-box;
   width: 100%;
   .flexbox {
     display: flex;
@@ -245,6 +246,7 @@ header {
               color: #555;
               background-color: #333 !important;
               box-shadow: 0 0 1px 0 #555;
+              outline: none;
             }
           }
           .searchbox__submit {
@@ -280,7 +282,7 @@ header {
           .searchbox__reset {
             display: block;
             position: absolute;
-            top: 0;
+            top: 2px;
             right: 8px;
             margin: 0;
             border: 0;
@@ -292,6 +294,37 @@ header {
             fill: rgba(0, 0, 0, 0.5);
           }
         }
+      }
+    }
+  }
+  .mobile-nav{
+    padding: 0 5px;
+    ul{
+      overflow: hidden;
+      width: 100%;
+      display: table;
+      li{
+        display: table-cell;
+        width: 20%;
+        padding: 8px 2px;
+      }
+      a{
+        float: left;
+        width: 100%;
+        background-color: #333;
+        color: #fc0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 0.625em;
+        font-weight: 900;
+        padding: 10px 5px;
+        border-radius: 5px;
+      }
+      .current a{
+        background-color: #fc0;
+        color: #222;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 1px 5px rgba(0,0,0,0.5);
+        text-shadow: 0 1px 0 rgba(255,255,255,0.3);
       }
     }
   }
