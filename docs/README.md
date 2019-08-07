@@ -1,1 +1,1 @@
-# vuepress
+home: true
